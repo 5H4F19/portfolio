@@ -24,7 +24,7 @@ export const About = () => {
           <span className='bg-[url("/rash_development.svg")] bg-no-repeat bg-top'>
             development
           </span>
-          . As a key member of a software agency called 'Multicone',
+          . As a key member of a software agency called &apos;Multicone&apos;,
           I take pride in delivering impactful solutions that meet the highest technical standards.
           You can learn more about our work at <Link className='text-cyan-500' href="https://multicone.io/">multicone.io</Link>.
           Additionally, I freelance on Fiverr to continuously expand my skill set and stay at the forefront of the industry.

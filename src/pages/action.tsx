@@ -10,7 +10,7 @@ export const ActionSection = ({ setIsMin }: { setIsMin: (f: boolean) => void }) 
         className="relative group w-fit mx-auto hover:scale-105 focus:scale-100 transition-all duration-300 cursor-pointer">
         <div className="absolute -inset-1 bg-gradient-to-r bg-[#3E4980] rounded-lg blur-2xl"></div>
         <div className="relative px-8 py-3 bg-[#3E4980] rounded-2xl">
-          <p style={baloo.style} className="text-white">Let's talk</p>
+          <p style={baloo.style} className="text-white">Let&apos;s talk</p>
         </div>
       </div>
     </div>
