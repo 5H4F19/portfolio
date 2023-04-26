@@ -65,6 +65,7 @@ export const Techs = () => {
       <div className='grid w-f[90vw] md:grid-cols-3 gap-10 max-w-5xl mx-auto'>
         {techInfos?.map(({ title, image, description, tools }, idx) => (
           <Tech
+            key={title}
             title={title}
             image={image}
             description={description}
@@ -95,7 +96,7 @@ const Tools = ({ tools }: { tools: Tool[] }) => {
   return (
     <div className='flex gap-3 flex-wrap'>
       {tools?.map(tool => (
-        <div className='center gap-2 px-4 py-1 border border-[#46518A] rounded-full'>
+        <div key={tool.name} className='center gap-2 px-4 py-1 border border-[#46518A] rounded-full'>
           <Image src={tool.image} height={16} width={16} alt='' />
           <div style={eudo_sans.style} className='text-white text-sm capitalize'>
             {tool.name}

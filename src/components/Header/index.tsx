@@ -27,6 +27,7 @@ export function Header({ items }: { items: Nav[] }) {
               <div className='absolute top-0 z-0 left-12 h-12 w-12 bg-white rounded-lg blur-2xl'></div>
               {items?.map(item => (
                 <div
+                  key={item.name}
                   style={eudo_sans.style}
                   className='text-white z-10 px-5 mx-1 py-2.5 hover:bg-gradient-to-tr from-primary to-black/0 hover:px-8 transition-all duration-500 rounded-lg capitalize'
                   onClick={() => scrollTo(item.ref)}>

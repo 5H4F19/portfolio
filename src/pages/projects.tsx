@@ -24,7 +24,7 @@ export default function Projects(props: Props) {
       </div>
       <div className="space-y-20">
         {projects?.map((x, idx) => (
-          <Project index={idx} item={x} direction={idx % 2 == 0 ? "left" : "right"} />
+          <Project key={x._id} index={idx} item={x} direction={idx % 2 == 0 ? "left" : "right"} />
         ))}
       </div>
     </div>

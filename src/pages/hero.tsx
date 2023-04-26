@@ -6,10 +6,10 @@ import Image from 'next/image';
 
 
 
-export function Hero({ ref }: Ref) {
+export function Hero() {
 
   return (
-    <div className='relative' ref={ref}>
+    <div className='relative'>
       <div style={{ zIndex: -1 }} className='h-[75vh] w-screen bg-primary'>
         <div style={{ zIndex: 9 }} className={c(baloo.className,
           'absCenter z-0 text-7xl w-full text-center',

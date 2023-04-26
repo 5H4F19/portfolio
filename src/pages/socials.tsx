@@ -25,7 +25,7 @@ export const Socials = ({ socials: a }: { socials: ISocials }) => {
       <Headline className="mb-5 mx-auto" l={{ title: "Socials", tagline: "Stay connected" }} />
       <div className='max-w-[60rem] grid items-center justify-center md:grid-cols-3 gap-y-6 mx-auto'>
         {socials?.map(site => (
-          <Social tool={site} />
+          <Social key={site.name} tool={site} />
         ))}
       </div>
     </div>

@@ -80,7 +80,7 @@ export default function Home(props: Props) {
       </Head>
       <Header items={nav} />
       <Image className='mt-14 mx-auto' src="/headline.svg" height={99} width={681} alt='Headline' />
-      <Hero ref={heroRef} />
+      <Hero />
       <div ref={projectRef}>
         <Projects projects={props.projects!} setHeight={setHeight} />
       </div>
