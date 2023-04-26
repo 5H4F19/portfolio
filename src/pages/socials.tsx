@@ -5,17 +5,21 @@ import { eudo_sans } from '@/utils/font'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { ISocials } from '.'
 
-const socials: Social[] = [
-  { name: 'github', image: '/github.svg', url: "https://www.github.com/5H4F19" },
-  { name: 'linkedin', image: '/linkedin.svg', url: "" },
-  { name: 'fiverr', image: '/fiverr.svg', url: "" },
-  { name: 'facebook', image: '/facebook.svg', url: "" },
-  { name: 'instagram', image: '/instagram.svg', url: "" },
-  { name: 'whatsApp', image: 'whatsapp.svg', url: "" }
-]
 
-export const Socials = () => {
+
+export const Socials = ({ socials: a }: { socials: ISocials }) => {
+
+  const socials: Social[] = [
+    { name: 'github', image: '/github.svg', url: a.github },
+    { name: 'linkedin', image: '/linkedin.svg', url: a.linkedin },
+    { name: 'fiverr', image: '/fiverr.svg', url: a.fiverr },
+    { name: 'facebook', image: '/facebook.svg', url: a.facebook },
+    { name: 'instagram', image: '/instagram.svg', url: a.insta },
+    { name: 'whatsApp', image: 'whatsapp.svg', url: a.whatsapp }
+  ]
+
   return (
     <div className='mt-44'>
       <Headline className="mb-5 mx-auto" l={{ title: "Socials", tagline: "Stay connected" }} />
