@@ -1,9 +1,9 @@
 import { Headline } from "@/components/Headline";
+import { IProjects } from "@/pages";
 import { c } from "@/utils/c";
 import { eudo_sans } from "@/utils/font";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { IProjects } from ".";
 
 type Props = {
   projects: IProjects[],

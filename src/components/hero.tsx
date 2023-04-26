@@ -1,4 +1,3 @@
-import { Ref } from '@/interface';
 import { c } from '@/utils/c';
 import { baloo } from '@/utils/font';
 import Spline from '@splinetool/react-spline';
@@ -6,7 +5,7 @@ import Image from 'next/image';
 
 
 
-export function Hero() {
+export default function Hero() {
 
   return (
     <div className='relative'>

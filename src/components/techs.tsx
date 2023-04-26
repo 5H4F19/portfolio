@@ -58,7 +58,7 @@ const techInfos: TechProps[] = [
   }
 ]
 
-export const Techs = () => {
+const Techs = () => {
   return (
     <div className='w-[90vw] mx-auto mt-44'>
       <Headline className="mb-5 mx-auto" l={{ title: "Techs", tagline: "Quality tools, quality results" }} />
@@ -76,6 +76,7 @@ export const Techs = () => {
     </div>
   )
 }
+export default Techs
 
 export const Tech = ({ title, image, description, tools }: TechProps) => {
   return (

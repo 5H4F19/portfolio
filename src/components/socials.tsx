@@ -1,15 +1,15 @@
 import { Headline } from '@/components/Headline'
 import { Social, } from '@/interface'
+import { ISocials } from '@/pages'
 import { c } from '@/utils/c'
 import { eudo_sans } from '@/utils/font'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { ISocials } from '.'
 
 
 
-export const Socials = ({ socials: a }: { socials: ISocials }) => {
+const Socials = ({ socials: a }: { socials: ISocials }) => {
 
   const socials: Social[] = [
     { name: 'github', image: '/github.svg', url: a.github },
@@ -31,6 +31,7 @@ export const Socials = ({ socials: a }: { socials: ISocials }) => {
     </div>
   )
 }
+export default Socials
 
 const Social = ({ tool }: { tool: Social }) => {
   const { name, image, url } = tool

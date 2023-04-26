@@ -1,7 +1,7 @@
-import { baloo, cursive, eudo_sans } from '@/utils/font'
+import { baloo, cursive, } from '@/utils/font'
 import React from 'react'
 
-export const ActionSection = ({ setIsMin }: { setIsMin: (f: boolean) => void }) => {
+const ActionSection = ({ setIsMin }: { setIsMin: (f: boolean) => void }) => {
   return (
     <div className='w-fit mx-auto h-[50vh] flex-col center space-y-8'>
       <div style={cursive.style} className='text-white text-5xl text-center mx-auto'>Interested in talking?</div>
@@ -16,4 +16,4 @@ export const ActionSection = ({ setIsMin }: { setIsMin: (f: boolean) => void }) 
     </div>
   )
 }
-
+export default ActionSection

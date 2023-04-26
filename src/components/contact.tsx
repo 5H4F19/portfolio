@@ -1,9 +1,9 @@
 import { c } from '@/utils/c'
 import { eudo_sans } from '@/utils/font'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React from 'react'
 
-export const Contact = ({ height, isMin, setIsMin }: { height: number, isMin: boolean, setIsMin: (b: boolean) => void }) => {
+const Contact = ({ height, isMin, setIsMin }: { height: number, isMin: boolean, setIsMin: (b: boolean) => void }) => {
   return (
     <>
       <div className={c(height < 20 && !isMin ? "opacity-100 right-5 bottom-5" : "opacity-0 -right-96 -bottom-96",
@@ -49,4 +49,4 @@ export const Contact = ({ height, isMin, setIsMin }: { height: number, isMin: bo
     </>
   )
 }
-
+export default Contact

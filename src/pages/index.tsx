@@ -1,17 +1,18 @@
-import React, { LegacyRef, RefObject, useRef, useState } from 'react'
-import { Hero } from './hero'
+import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import { Header } from '@/components/Header'
 import { Nav } from '@/interface'
-import Projects from './projects'
-import { Techs } from './techs'
-import { Socials } from './socials'
-import { About } from './about'
-import { Contact } from './contact'
-import { Achievements } from './achievements'
-import { ActionSection } from './action'
 import { Footer } from '@/components/footer'
 import Head from 'next/head'
+import Hero from '@/components/hero'
+import Projects from '@/components/projects'
+import Techs from '@/components/techs'
+import Socials from '@/components/socials'
+import About from '@/components/about'
+import Contact from '@/components/contact'
+import Achievements from '@/components/achievements'
+import ActionSection from '@/components/action'
+
 
 
 export type Props = {

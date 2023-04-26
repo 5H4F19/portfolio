@@ -3,7 +3,7 @@ import { eudo_sans } from '@/utils/font';
 import Image from 'next/image';
 import React from 'react'
 
-export const Achievements = () => {
+const Achievements = () => {
   return (
     <div className='mt-44'>
       <Headline className="mb-14" l={{ title: "Awards", tagline: "Celebrating my successes" }} />
@@ -30,4 +30,4 @@ export const Achievements = () => {
     </div>
   )
 }
-
+export default Achievements

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export const About = () => {
+const About = () => {
   return (
     <div className='mt-44'>
       <Headline className="mb-5 mx-auto" l={{ title: "About", tagline: "A glimpse into my world" }} />
@@ -34,4 +34,4 @@ export const About = () => {
     </div>
   )
 }
-
+export default About
