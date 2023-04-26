@@ -39,8 +39,8 @@ export type ISocials = {
 
 export async function getServerSideProps() {
   try {
-    let response = await fetch('http://localhost:3000/api/projects');
-    let response2 = await fetch('http://localhost:3000/api/socials');
+    let response = await fetch(`${process.env.URL}/api/projects`);
+    let response2 = await fetch(`${process.env.URL}/api/socials`);
     let projects = await response.json();
     let socials = await response2.json();
 
