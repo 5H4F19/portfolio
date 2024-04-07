@@ -37,10 +37,6 @@ export type ISocials = {
   whatsapp: string;
 }
 
-const projects: IProjects[] = [
-
-]
-
 
 export default function Home(props: Props) {
   const heroRef = useRef<HTMLDivElement>(null)
