@@ -37,25 +37,9 @@ export type ISocials = {
   whatsapp: string;
 }
 
-export async function getServerSideProps() {
-  try {
-    let response = await fetch(`https://portfolio-ashy-ten-44.vercel.app/api/projects`);
-    let response2 = await fetch(`https://portfolio-ashy-ten-44.vercel.app/api/socials`);
-    let projects = await response.json();
-    let socials = await response2.json();
+const projects: IProjects[] = [
 
-    return {
-      props: {
-        projects: JSON.parse(JSON.stringify(projects)),
-        socials: JSON.parse(JSON.stringify(socials))
-      },
-    };
-  } catch (e: any) {
-    console.error(e);
-  }
-}
-
-
+]
 
 
 export default function Home(props: Props) {

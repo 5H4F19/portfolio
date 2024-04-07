@@ -1,5 +1,5 @@
 import { Headline } from '@/components/Headline'
-import { Social, } from '@/interface'
+import { Social } from '@/interface'
 import { ISocials } from '@/pages'
 import { c } from '@/utils/c'
 import { eudo_sans } from '@/utils/font'
