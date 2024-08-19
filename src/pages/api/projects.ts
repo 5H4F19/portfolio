@@ -6,7 +6,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const client = await clientPromise;
     const db = client.db("portfolio");
 
-    const post = await db.collection("projects").find({}).toArray();
+    const post = await db.collection("projects").find({}).sort({ createdAt: -1 }).toArray();
 
     res.json(post);
   } catch (e: any) {

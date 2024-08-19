@@ -93,7 +93,7 @@ export const Tech = ({ title, image, description, tools }: TechProps) => {
   )
 }
 
-const Tools = ({ tools }: { tools: Tool[] }) => {
+export const Tools = ({ tools }: { tools: Tool[] }) => {
   return (
     <div className='flex gap-3 flex-wrap'>
       {tools?.map(tool => (

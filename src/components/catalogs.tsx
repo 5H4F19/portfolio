@@ -1,3 +1,4 @@
+
 import { Headline } from "@/components/Headline";
 import { Tool } from "@/interface";
 import { IProjects } from "@/pages";
@@ -17,7 +18,7 @@ const design_tools: Tool[] = [
   { name: 'react Native', image: '/react.svg' }
 ]
 
-export default function Projects(props: Props) {
+export default function Catalogs(props: Props) {
   const { projects, setHeight } = props
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
@@ -26,7 +27,7 @@ export default function Projects(props: Props) {
   return (
     <div className="w-[90vw] mt-44">
       <div ref={ref} className="m-0 p-0">
-        <Headline l={{ title: "Projects", tagline: "Transforming visions into reality" }} />
+        <Headline l={{ title: "Catalogs", tagline: "Where elegance meets practicality" }} />
       </div>
       <div className="space-y-20">
         {projects?.map((x, idx) => (

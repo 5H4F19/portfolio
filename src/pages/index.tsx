@@ -7,6 +7,7 @@ import Head from 'next/head'
 import Hero from '@/components/hero'
 import Projects from '@/components/projects'
 import Techs from '@/components/techs'
+import Catalogs from '@/components/catalogs'
 import Socials from '@/components/socials'
 import About from '@/components/about'
 import Contact from '@/components/contact'
@@ -26,6 +27,7 @@ export type IProjects = {
   desc: string;
   url: string;
   href: string;
+  type: string;
 }
 export type ISocials = {
   _id: string;
@@ -62,6 +64,7 @@ export default function Home(props: Props) {
   const heroRef = useRef<HTMLDivElement>(null)
   const projectRef = useRef<HTMLDivElement>(null)
   const techsRef = useRef<HTMLDivElement>(null)
+  const catalogRef = useRef<HTMLDivElement>(null)
   const socialRef = useRef<HTMLDivElement>(null)
 
   const nav: Nav[] = [
@@ -73,7 +76,6 @@ export default function Home(props: Props) {
 
   const [height, setHeight] = useState<number>()
   const [isMin, setIsMin] = useState<boolean>(false)
-  console.log("from index", height)
   return (
     <div className='relative w-screen bg-primary overflow-y-scroll overflow-x-hidden px-5'>
       <Head>
@@ -87,6 +89,9 @@ export default function Home(props: Props) {
       </div>
       <div ref={techsRef}>
         <Techs />
+      </div>
+      <div ref={catalogRef}>
+        <Catalogs projects={props.projects!} setHeight={setHeight} />
       </div>
       <div ref={socialRef}>
         <Socials socials={props.socials!} />
