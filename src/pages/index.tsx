@@ -13,7 +13,6 @@ import About from '@/components/about'
 import Contact from '@/components/contact'
 import Achievements from '@/components/achievements'
 import ActionSection from '@/components/action'
-import type { InferGetServerSidePropsType,GetServerSideProps } from 'next'
 
 
 export type Props = {
