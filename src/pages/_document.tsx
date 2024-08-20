@@ -7,6 +7,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+      <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js" async></script>
       </Head>
       <body>
         <Main />

@@ -13,7 +13,7 @@ import About from '@/components/about'
 import Contact from '@/components/contact'
 import Achievements from '@/components/achievements'
 import ActionSection from '@/components/action'
-
+import type { InferGetServerSidePropsType,GetServerSideProps } from 'next'
 
 
 export type Props = {
@@ -29,6 +29,7 @@ export type IProjects = {
   href: string;
   type: string;
 }
+
 export type ISocials = {
   _id: string;
   linkedin: string;
@@ -39,6 +40,24 @@ export type ISocials = {
   whatsapp: string;
 }
 
+
+export async function getServerSideProps() {
+  try {
+    let response = await fetch('http://localhost:3000/api/projects');
+    let response2 = await fetch('http://localhost:3000/api/socials');
+    let projects = await response.json();
+    let socials = await response2.json();
+
+    return {
+      props: {
+        projects: JSON.parse(JSON.stringify(projects)),
+        socials: JSON.parse(JSON.stringify(socials))
+      },
+    };
+  } catch (e: any) {
+    console.error(e);
+  }
+}
 
 export default function Home(props: Props) {
   const heroRef = useRef<HTMLDivElement>(null)
@@ -62,7 +81,7 @@ export default function Home(props: Props) {
         <title>Shafiq S.</title>
       </Head>
       <Header items={nav} />
-      <Image className='mt-14 mx-auto' src="/headline.svg" height={99} width={681} alt='Headline' />
+      <Image className='mt-14 mx-auto' src="/headline.svg" height={70} width={681} alt='Headline' />
       <Hero />
       <div ref={projectRef}>
         <Projects projects={props.projects!} setHeight={setHeight} />

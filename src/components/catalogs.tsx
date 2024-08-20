@@ -23,7 +23,8 @@ export default function Catalogs(props: Props) {
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
     window.addEventListener("scroll", () => { setHeight(Number(ref?.current?.offsetTop) - Number(window.pageYOffset)) })
-  }, [])
+  }, [setHeight])
+
   return (
     <div className="w-[90vw] mt-44">
       <div ref={ref} className="m-0 p-0">

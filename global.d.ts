@@ -6,7 +6,8 @@ declare global {
       mesh: any,
       group: any,
       directionalLight: any,
-      hemisphereLight: any
+      hemisphereLight: any,
+      'spline-viewer':any
     }
   }
 }

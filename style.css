@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+spline-viewer::shadow a {
+  font-size:12;
+}
 @layer components {
   .center  {@apply flex justify-center items-center}
   .centerV {@apply flex items-center}

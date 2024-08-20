@@ -1,7 +1,7 @@
 import clientPromise from "@/utils/mongodb";
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const Project =  async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const client = await clientPromise;
     const db = client.db("portfolio");
@@ -14,3 +14,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     throw new Error(e).message;
   }
 }
+
+export default Project
